@@ -1,0 +1,70 @@
+.box {
+  width: 410px;
+  margin: 50px auto;
+  padding: 40px;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 35px;
+  background-color: rgb(221, 254, 255);
+}
+
+.box img {
+  width: 100px;
+  height: 100px;
+  border: 2.5px solid rgb(0, 74, 117);
+  border-radius: 50px;
+  display: inline-block;
+  vertical-align: 1px;
+}
+
+.box h1 {
+  font-size: 22px;
+  display: inline-block;
+  vertical-align: 45px;
+  padding: 2.5px;
+}
+
+.box #job {
+  font-size: 17px;
+  color: rgb(0, 0, 114);
+  text-align: justify;
+}
+
+.box #intro {
+  font-size: 17px;
+  color: rgb(5, 80, 0);
+  text-align: justify;
+}
+
+.box h2 {
+  margin: 5px;
+}
+
+.box ul {
+  list-style: none;
+}
+
+.box li {
+  background-color: rgba(255, 245, 107, 0.841);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.box a {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(52, 21, 255);
+  color: rgb(255, 255, 255);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+
+.box a:hover {
+  background-color: rgb(255, 240, 27);
+  color: rgb(37, 0, 0);
+}

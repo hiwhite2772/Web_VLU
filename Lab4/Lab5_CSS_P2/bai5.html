@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="vi">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Menu 1 tầng</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .menu {
+        background-color: #3a3a3a;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        width: 100%;
+      }
+
+      .menu li a {
+        display: block;
+        color: white;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 25px;
+        font-weight: bold;
+
+      }
+
+      .menu li a:hover {
+        background-color: #04aa6d89;
+      }
+
+      .menu2 {
+        background-color: #3a3a3a;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        width: 200px;
+      }
+
+      .menu2 li a {
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        padding: 15px 25px;
+        font-weight: bold;
+
+      }
+
+      .menu2 li a:hover {
+        background-color: #04aa6d89;
+      }
+
+      .act {
+        background-color: #04AA6D;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Mục hàng ngang -->
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#" class="act">Articles</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+    <br>
+    <!-- Mục cột dọc -->
+    <ul class="menu2">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#" class="act">Articles</a></li>
+      <li><a href="#">Forum</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+
+  </body>
+
+  </html>
+
+</body>
+
+</html>

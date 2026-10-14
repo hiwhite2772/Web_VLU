@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xúc xắc may mắn</title>
+</head>
+
+<body>
+  <h3>Bài 7. Xúc xắc may mắn</h3>
+  <button onclick="bai7()">Lắc xúc xắc</button>
+  <p id="kq7"></p>
+
+  <script>
+    function bai7() {
+      let so = Math.floor(Math.random() * 6) + 1;
+
+      document.getElementById("kq7").innerHTML =
+        "Bạn tung được số: " + so;
+    }
+  </script>
+</body>
+
+</html>

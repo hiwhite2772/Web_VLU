@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máy tính đơn giản</title>
+</head>
+
+<body>
+  <h3>Bài 10. Máy tính đơn giản</h3>
+  <label>Nhập A: </label>
+  <input type="number" id="a" placeholder="Nhập số thứ nhất">
+  <br><br>
+  <label>Nhập B: </label>
+  <input type="number" id="b" placeholder="Nhập số thứ hai">
+  <br><br>
+  <button onclick="bai10('+')">Cộng</button>
+  <button onclick="bai10('-')">Trừ</button>
+  <button onclick="bai10('*')">Nhân</button>
+  <button onclick="bai10('/')">Chia</button>
+  <p id="kq10"></p>
+
+  <script>
+    function bai10(phepTinh) {
+      let a = document.getElementById("a").value;
+      let b = document.getElementById("b").value;
+
+      if (a === "" || b === "") {
+        document.getElementById("kq10").innerHTML = "Vui lòng nhập đủ hai số!";
+        return;
+      }
+
+      a = Number(a);
+      b = Number(b);
+
+      let ketQua;
+
+      if (phepTinh == "+") {
+        ketQua = a + b;
+      } else if (phepTinh == "-") {
+        ketQua = a - b;
+      } else if (phepTinh == "*") {
+        ketQua = a * b;
+      } else if (phepTinh == "/") {
+        if (b == 0) {
+          document.getElementById("kq10").innerHTML = "Không thể chia cho 0!";
+          return;
+        }
+        ketQua = a / b;
+      }
+
+      document.getElementById("kq10").innerHTML = "Kết quả: " + ketQua;
+    }
+  </script>
+</body>
+
+</html>

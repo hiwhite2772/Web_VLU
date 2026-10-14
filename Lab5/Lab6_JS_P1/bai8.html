@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dự đoán nghề nghiệp</title>
+</head>
+
+<body>
+  <h3>Bài 8. Dự đoán nghề nghiệp</h3>
+  <input type="text" id="tennghe" placeholder="Nhập tên của bạn">
+  <button onclick="bai8()">Dự đoán</button>
+  <p id="kq8" class="ketqua"></p>
+
+  <script>
+    function bai8() {
+      let ten = document.getElementById("tennghe").value;
+
+      if (ten.trim() === "") {
+        document.getElementById("kq8").innerHTML =
+          "Vui lòng nhập tên!";
+        return;
+      }
+
+      let ngheNghiep = [
+        "Giáo viên",
+        "Bác sĩ",
+        "Lập trình viên",
+        "Ca sĩ",
+        "Đầu bếp",
+        "Kỹ sư",
+        "Họa sĩ"
+      ];
+
+      let viTri = Math.floor(Math.random() * ngheNghiep.length);
+
+      document.getElementById("kq8").innerHTML =
+        ten + " có thể trở thành: " + ngheNghiep[viTri];
+    }
+
+  </script>
+</body>
+
+</html>

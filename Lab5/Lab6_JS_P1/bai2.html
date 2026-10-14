@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính tuổi</title>
+</head>
+
+<body>
+  <h2>Bài 2. Tính tuổi</h2>
+  <input type="number" id="namsinh" placeholder="Nhập năm sinh">
+  <button onclick="bai2()">Tính tuổi</button>
+  <p id="kq2"></p>
+  <script>
+    function bai2() {
+      let namSinh = Number(document.getElementById("namsinh").value);
+      let namHienTai = new Date().getFullYear();
+
+      if (document.getElementById("namsinh").value === "" || namSinh <= 0 || namSinh > namHienTai) {
+        document.getElementById("kq2").innerHTML = "Năm sinh không hợp lệ!";
+      } else {
+        let tuoi = namHienTai - namSinh;
+        document.getElementById("kq2").innerHTML = "Tuổi của bạn là: " + tuoi;
+      }
+    }
+  </script>
+</body>
+
+</html>

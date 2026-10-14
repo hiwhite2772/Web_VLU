@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trò chơi oẳn tù tì</title>
+</head>
+
+<body>
+  <h3>Bài 6. Trò chơi Oẳn tù tì</h3>
+  <button onclick="bai6('Đá')">Đá</button>
+  <button onclick="bai6('Giấy')">Giấy</button>
+  <button onclick="bai6('Kéo')">Kéo</button>
+  <p id="kq6"></p>
+
+  <script>
+    function bai6(nguoiChon) {
+      let danhSach = ["Đá", "Giấy", "Kéo"];
+      let mayChon = danhSach[Math.floor(Math.random() * 3)];
+      let ketQua = "";
+
+      if (nguoiChon == mayChon) {
+        ketQua = "Hòa!";
+      } else if (
+        (nguoiChon == "Đá" && mayChon == "Kéo") ||
+        (nguoiChon == "Giấy" && mayChon == "Đá") ||
+        (nguoiChon == "Kéo" && mayChon == "Giấy")
+      ) {
+        ketQua = "Bạn thắng!";
+      } else {
+        ketQua = "Bạn thua!";
+      }
+
+      document.getElementById("kq6").innerHTML =
+        "Bạn chọn: " + nguoiChon +
+        " | Máy chọn: " + mayChon +
+        " | Kết quả: " + ketQua;
+    }
+  </script>
+</body>
+
+</html>

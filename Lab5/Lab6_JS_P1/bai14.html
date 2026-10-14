@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tính chỉ số BMI</title>
+</head>
+
+<body>
+  <h3>Bài 14. Tính chỉ số BMI</h3>
+  <label>Nhập số chiều cao:</label>
+  <input type="number" id="chieucao" placeholder="Chiều cao (m)">
+  <br><br>
+  <label>Nhập số cân nặng:</label>
+  <input type="number" id="cannang" placeholder="Cân nặng (kg)">
+  <br><br>
+  <button onclick="bai14()">Tính BMI</button>
+  <p id="kq14"></p>
+  <script>
+    function bai14() {
+      let chieuCao = Number(document.getElementById("chieucao").value);
+      let canNang = Number(document.getElementById("cannang").value);
+
+      if (
+        document.getElementById("chieucao").value === "" ||
+        document.getElementById("cannang").value === "" ||
+        chieuCao <= 0 || canNang <= 0
+      ) {
+        document.getElementById("kq14").innerHTML =
+          "Vui lòng nhập chiều cao và cân nặng hợp lệ!";
+        return;
+      }
+
+      let bmi = canNang / (chieuCao * chieuCao);
+      let ketLuan = "";
+
+      if (bmi < 18.5) {
+        ketLuan = "Gầy";
+      } else if (bmi < 25) {
+        ketLuan = "Bình thường";
+      } else if (bmi < 30) {
+        ketLuan = "Thừa cân";
+      } else {
+        ketLuan = "Béo phì";
+      }
+
+      document.getElementById("kq14").innerHTML =
+        "Chỉ số BMI: " + bmi.toFixed(2) +
+        " - Kết luận: " + ketLuan;
+    }
+  </script>
+</body>
+
+</html>

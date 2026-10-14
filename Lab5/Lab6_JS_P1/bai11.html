@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểm tra mật khẩu</title>
+</head>
+
+<body>
+  <h3>Bài 11. Kiểm tra mật khẩu</h3>
+  <label>Nhập mật khẩu: </label>
+  <input type="password" id="matkhau" placeholder="Nhập mật khẩu">
+  <br><br>
+  <button onclick="bai11()">Kiểm tra</button>
+  <p id="kq11"></p>
+  <script>
+    function bai11() {
+      let matKhau = document.getElementById("matkhau").value;
+      if (matKhau == "") {
+        document.getElementById("kq11").innerHTML = "Vui lòng nhập mật khẩu đầy đủ!";
+        return;
+      }
+      if (matKhau.length >= 8) {
+        document.getElementById("kq11").innerHTML =
+          "Mật khẩu hợp lệ";
+      } else {
+        document.getElementById("kq11").innerHTML =
+          "Mật khẩu quá ngắn";
+      }
+    }
+  </script>
+</body>
+
+</html>

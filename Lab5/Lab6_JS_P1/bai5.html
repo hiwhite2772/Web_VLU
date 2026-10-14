@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đoán số may mắn</title>
+</head>
+
+<body>
+  <h3>Bài 5. Đoán số may mắn</h3>
+  <input type="number" id="doanso" placeholder="Nhập số từ 1 đến 10">
+  <button onclick="bai5()">Đoán số</button>
+  <p id="kq5"></p>
+
+  <script>
+    function bai5() {
+      let soDoan = document.getElementById("doanso").value;
+
+      if (soDoan === "" || Number(soDoan) < 1 ||
+        Number(soDoan) > 10 || !Number.isInteger(Number(soDoan))) {
+        document.getElementById("kq5").innerHTML =
+          "Vui lòng nhập số nguyên từ 1 đến 10!";
+        return;
+      }
+
+      let soMay = Math.floor(Math.random() * 10) + 1;
+
+      if (Number(soDoan) == soMay) {
+        document.getElementById("kq5").innerHTML =
+          "Chúc mừng! Bạn đã đoán đúng số " + soMay;
+      } else {
+        document.getElementById("kq5").innerHTML =
+          "Chưa may mắn! Số của máy là " + soMay;
+      }
+    }
+
+  </script>
+</body>
+
+</html>

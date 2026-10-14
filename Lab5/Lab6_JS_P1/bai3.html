@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xếp loại học lực</title>
+</head>
+
+<body>
+  <h3>Bài 3. Xếp loại học lực</h3>
+  <input type="number" id="diem" placeholder="Nhập điểm từ 0 đến 100">
+  <button onclick="bai3()">Xếp loại</button>
+  <p id="kq3"></p>
+  <script>
+    function bai3() {
+      let diem = document.getElementById("diem").value;
+      let kq = "";
+
+      if (diem === "" || Number(diem) < 0 || Number(diem) > 100) {
+        kq = "Điểm không hợp lệ!";
+      } else if (Number(diem) >= 90) {
+        kq = "Xếp loại A";
+      } else if (Number(diem) >= 80) {
+        kq = "Xếp loại B";
+      } else if (Number(diem) >= 70) {
+        kq = "Xếp loại C";
+      } else if (Number(diem) >= 60) {
+        kq = "Xếp loại D";
+      } else {
+        kq = "Xếp loại F";
+      }
+
+      document.getElementById("kq3").innerHTML = kq;
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểm tra số chẵn lẻ</title>
+</head>
+
+<body>
+  <h2>Bài 1. Kiểm tra số chẵn - số lẻ</h2>
+  <input type="number" id="so1" placeholder="Nhập số nguyên">
+  <button onclick="bai1()">Kiểm tra</button>
+  <p id="kq1"></p>
+
+  <script>
+    function bai1() {
+      let so = document.getElementById("so1").value;
+
+      if (so === "" || !Number.isInteger(Number(so))) {
+        document.getElementById("kq1").innerHTML =
+          "Vui lòng nhập một số nguyên!";
+      } else if (Number(so) % 2 == 0) {
+        document.getElementById("kq1").innerHTML =
+          so + " là số chẵn";
+      } else {
+        document.getElementById("kq1").innerHTML =
+          so + " là số lẻ";
+      }
+    }
+  </script>
+</body>
+
+</html>

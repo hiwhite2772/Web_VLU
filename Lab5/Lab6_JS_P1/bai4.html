@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem bói tình yêu</title>
+</head>
+
+<body>
+  <h3>Bài 4. Máy tính tình yêu</h3>
+  Tên bạn:
+  <input type="text" id="ten1" placeholder="Tên của bạn">
+  <br><br>
+  Tên người ấy:
+  <input type="text" id="ten2" placeholder="Tên người ấy">
+  <br><br>
+  <button onclick="bai4()">Kết quả</button>
+  <p id="kq4"></p>
+
+  <script>
+    function bai4() {
+      let ten1 = document.getElementById("ten1").value;
+      let ten2 = document.getElementById("ten2").value;
+
+      if (ten1.trim() === "" || ten2.trim() === "") {
+        document.getElementById("kq4").innerHTML =
+          "Vui lòng nhập đầy đủ hai tên!";
+        return;
+      }
+
+      let phanTram = Math.floor(Math.random() * 100) + 1;
+      let thongBao = "";
+
+      if (phanTram >= 80) {
+        thongBao = "Rất hợp nhau!";
+      } else if (phanTram >= 50) {
+        thongBao = "Khá hợp nhau!";
+      } else {
+        thongBao = "Cần tìm hiểu nhau nhiều hơn!";
+      }
+
+      document.getElementById("kq4").innerHTML =
+        ten1 + " và " + ten2 + " phù hợp " +
+        phanTram + "%. " + thongBao;
+    }
+  </script>
+</body>
+
+</html>

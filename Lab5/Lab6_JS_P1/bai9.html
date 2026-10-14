@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xem bói tình yêu</title>
+</head>
+
+<body>
+  <h3>Bài 9. Quay thưởng may mắn</h3>
+  <button onclick="bai9()">Quay thưởng</button>
+  <p id="kq9"></p>
+
+  <script>
+    function bai9() {
+      let qua = [
+        "Một chiếc điện thoại",
+        "Một chiếc xe đạp",
+        "Một quyển sách",
+        "Một chiếc balo",
+        "Một phần quà bí mật"
+      ];
+
+      let viTri = Math.floor(Math.random() * qua.length);
+
+      document.getElementById("kq9").innerHTML =
+        "Phần thưởng của bạn là: " + qua[viTri];
+    }
+  </script>
+</body>
+
+</html>

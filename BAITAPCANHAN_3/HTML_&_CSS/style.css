@@ -1,0 +1,121 @@
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+}
+
+/* PHẦN 1: HEADER + NAV */
+header {
+  background-color: #8d5e0c;
+  color: rgb(250, 250, 250);
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+p {
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #72f3ff;
+}
+
+/* PHẦN 2: BANNER + GIỚI THIỆU */
+
+#about img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+#about button {
+  background-color: #312ee4;
+  font-weight: bold;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#about button:hover {
+  background-color: #fcff3b;
+  color: black;
+}
+
+/* PHẦN 3: DANH SÁCH SẢN PHẨM */
+#products {
+  padding: 5px;
+  margin: 1;
+  box-sizing: border-box;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-item {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.product-item:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 350px;
+  height: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.product-item .product-name {
+  text-align: justify;
+  padding: 5px;
+}
+
+.product-item .price {
+  text-align: center;
+  padding: 5px;
+}
+
+/* PHẦN 4: CONTACT + FOOTER */
+#contact {
+  background-color: #fcff3b;
+  padding: 3px;
+
+}
+
+footer {
+  background-color: black;
+  color: beige;
+  text-align: center;
+}
